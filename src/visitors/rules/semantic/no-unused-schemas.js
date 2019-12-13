@@ -1,6 +1,5 @@
 class NoUnusedComponents {
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.components = {};
   }
 

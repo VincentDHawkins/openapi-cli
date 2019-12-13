@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
 import fs from 'fs';
 import yaml from 'js-yaml';
@@ -30,9 +31,9 @@ export const validate = (yamlData, filePath, options = {}) => {
   const filtered = ctx.result.filter((msg) => {
     for (let j = 0; j < ctx.customRules.length; j++) {
       if (msg.fromRule === ctx.customRules[j]) {
-        if (ctx.customRules[j].config.excludePaths) {
+        if (ctx.customRules[j]._config.excludePaths) {
           const fullPath = `${msg.file}#/${msg.path.join('/')}`;
-          return ctx.customRules[j].config.excludePaths.indexOf(fullPath) === -1;
+          return ctx.customRules[j]._config.excludePaths.indexOf(fullPath) === -1;
         }
         return true;
       }

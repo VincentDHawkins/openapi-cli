@@ -34,8 +34,7 @@ const getComponentName = (refString, components, componentType, node) => {
 };
 
 class Bundler {
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.components = {};
   }
 
@@ -114,8 +113,8 @@ class Bundler {
 
         let outputFile;
 
-        if (this.config.output) {
-          outputFile = this.config.output;
+        if (this._config.output) {
+          outputFile = this._config.output;
           const nameParts = outputFile.split('.');
           const ext = nameParts[nameParts.length - 1];
 
@@ -137,7 +136,7 @@ class Bundler {
               break;
           }
           fs.writeFileSync(`${outputPath}`, fileData);
-        } else if (this.config.outputObject) {
+        } else if (this._config.outputObject) {
           ctx.bundlingResult = node;
         } else {
           // default output to stdout, if smbd wants to pipe it

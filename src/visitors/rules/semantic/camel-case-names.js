@@ -13,8 +13,7 @@ const validateNode = (node, ctx, name) => {
 };
 
 class CamelCaseNames {
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.pattern = new RegExp('^_?[a-zA-Z](([^_]*[a-zA-Z]*)*)');
   }
 

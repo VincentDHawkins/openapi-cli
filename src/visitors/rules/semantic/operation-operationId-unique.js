@@ -3,8 +3,7 @@ class OperationIdUnique {
     return 'operation-operationId-unique';
   }
 
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.operationIds = {};
   }
 

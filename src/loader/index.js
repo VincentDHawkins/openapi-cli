@@ -2,20 +2,23 @@
 import path from 'path';
 import fs from 'fs';
 
+const DEFAULT_EXECUTION_ORDER = process.env.DEFAULT_EXECUTION_ORDER || 'late';
+
 const get = (p, o) => p.reduce((xs, x) => ((xs && xs[x]) ? xs[x] : null), o);
 
-function getObjByPathOrParent(json, JSONPath) {
-  const value = get(JSONPath.split('.'), json);
+function getRuleConfig(config, ruleName) {
+  const value = get(ruleName.split('.'), config);
   switch (typeof value) {
     case 'string':
       return {
         level: value,
-        executionOrder: 'default',
+        executionOrder: DEFAULT_EXECUTION_ORDER,
       };
     case 'object':
     default:
       return {
         level: 4,
+        executionOrder: DEFAULT_EXECUTION_ORDER,
         ...value,
       };
   }
@@ -42,7 +45,7 @@ function loadRuleset(config) {
 
   files.forEach((file) => {
     const Rule = require(file);
-    const ruleConfig = getObjByPathOrParent(configCopy.rules, Rule.rule) || { level: 4, executionOrder: 'default' };
+    const ruleConfig = getRuleConfig(configCopy.rules, Rule.rule);
 
     const ruleInstance = new Rule(ruleConfig);
     if (ruleConfig.level !== 'off') {
@@ -75,10 +78,24 @@ export function loadRulesetExtension(config, rulesetName) {
     rulesPath: config.rulesPath ? config.rulesPath : `${__dirname}/../visitors`,
   };
 
-  config[rulesetName].forEach((Rule) => {
-    const ruleConfig = getObjByPathOrParent(configCopy.rules, Rule.rule) || { level: 4, executionOrder: 'default' };
+  config.rulesExtensions.forEach((Rule) => {
+    const ruleConfig = getRuleConfig(configCopy.rules, Rule.rule);
+    ruleConfig.executionOrder = ruleConfig.executionOrder === 'default' ? DEFAULT_EXECUTION_ORDER : ruleConfig.executionOrder;
 
-    if (ruleConfig.level !== 'off') {
+    let shouldLoad = ruleConfig.level !== 'off';
+
+    switch (rulesetName) {
+      case 'early':
+        shouldLoad = shouldLoad && (ruleConfig.executionOrder === 'early' || ruleConfig.executionOrder === 'both');
+        break;
+      case 'late':
+        shouldLoad = shouldLoad && (ruleConfig.executionOrder === 'late' || ruleConfig.executionOrder === 'both');
+        break;
+      default:
+        return;
+    }
+
+    if (shouldLoad) {
       const ruleInstance = new Rule(ruleConfig);
       if (!ruleInstance.config) {
         ruleInstance.config = ruleConfig;

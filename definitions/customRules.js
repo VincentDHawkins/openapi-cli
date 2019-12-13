@@ -4,7 +4,7 @@ const path = require('path');
 
 class OverlaysMerger {
   static get rule() {
-    return 'writeCheck';
+    return 'overlaysMerger';
   }
 
   any() {
@@ -31,7 +31,7 @@ class OverlaysMerger {
 
 class MergeChecker {
   static get rule() {
-    return 'mergerCheck';
+    return 'mergeChecker';
   }
 
   OpenAPIInfo() {

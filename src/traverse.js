@@ -173,8 +173,7 @@ function runRuleOnRuleset(nodeContext, ruleName, ctx, definition, node, errors, 
       nodeContext.resolvedNode,
       ctx,
       ctx.customRules[i].constructor.rule,
-      ctx.customRules[i].config
-        ? ctx.customRules[i].config.level : ctx.customRules[i]._config.level,
+      ctx.customRules[i]._config.level,
     );
 
     const errorsOnEnterForType = ctx.customRules[i][definition.name]

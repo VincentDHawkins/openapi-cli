@@ -3,8 +3,7 @@ class ProvideContact {
     return 'provide-contact';
   }
 
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.requiredFields = ['name', 'email'];
     this.contactFields = [];
   }

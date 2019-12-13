@@ -15,6 +15,7 @@ rules:
 
   camel-case-names: off
   server-not-example: off
+  parameter-description: off
   api-servers: off
   license-url: off
   no-extra-fields: off

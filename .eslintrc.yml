@@ -16,4 +16,5 @@ rules:
   global-require: off
   import/no-dynamic-require: off
   no-plusplus: off
+  no-underscore-dangle: off
 

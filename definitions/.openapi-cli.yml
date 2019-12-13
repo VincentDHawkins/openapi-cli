@@ -1,10 +1,14 @@
 typeExtension: typeExtension.js
-# customRules: customRules.js
-customRulesEarly: customRules.js
+customRules: customRules.js
 codeframes: on
 rules:
+  overlaysMerger:
+    executionOrder: early
+  mergeChecker:
+    executionOrder: late
+
   bundler: off
-  debug-info: off
+  debug-info: on
 
   parameterPartial: warning
   parameterWithAllOf: warning
@@ -13,6 +17,7 @@ rules:
   oas3-schema/external-docs:
     url: off
 
+  api-servers: off
 
   path-param-exists: on
   operation-2xx-response: on
@@ -20,12 +25,11 @@ rules:
   no-unused-schemas: on
   operation-operationId-unique: on
   path-declarations-must-exist: on
-
-  api-servers: on
+  
   license-url: on
   no-extra-fields: on
-  operation-description: on
-  operation-operationId: on
+  operation-description: off
+  operation-operationId: off
   operation-tags: off
   provide-contact: on
   servers-no-trailing-slash: on

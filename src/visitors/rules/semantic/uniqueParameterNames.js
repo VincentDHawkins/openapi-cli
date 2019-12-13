@@ -3,8 +3,7 @@ class UniqueParameterNames {
     return 'unique-parameter-names';
   }
 
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.parametersStack = [];
   }
 

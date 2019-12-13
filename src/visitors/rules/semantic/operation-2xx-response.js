@@ -3,8 +3,7 @@ class Operation2xxResponse {
     return 'operation-2xx-response';
   }
 
-  constructor(config) {
-    this.config = config;
+  constructor() {
     this.responseCodes = [];
   }
 

@@ -42,11 +42,6 @@ function getConfig(options) {
   const rulesExtensions = require(resolvedConfig.customRules);
   resolvedConfig.rulesExtensions = rulesExtensions;
 
-  resolvedConfig.customRulesEarly = resolvedConfig.customRulesEarly
-    ? `${process.cwd()}/${resolvedConfig.customRulesEarly}` : `${__dirname}/customRulesDefault.js`;
-  const rulesExtensionsEarly = require(resolvedConfig.customRulesEarly);
-  resolvedConfig.rulesExtensionsEarly = rulesExtensionsEarly;
-
   return resolvedConfig;
 }
 

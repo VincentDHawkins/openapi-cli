@@ -47,7 +47,7 @@ class ValidateOpenAPIOperation {
   OpenAPIOperation() {
     return {
       onEnter: (node, definition, ctx) => ctx.validateFields(
-        this.config, this.rule, this.validators,
+        this._config, this.rule, this.validators,
       ),
     };
   }
