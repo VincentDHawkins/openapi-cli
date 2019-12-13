@@ -16,11 +16,11 @@ describe("getLocationByPath", () => {
     ).toMatchInlineSnapshot(`
       Object {
         "endCol": 14,
-        "endIndex": 456,
-        "endLine": 25,
+        "endIndex": 487,
+        "endLine": 27,
         "startCol": 9,
-        "startIndex": 451,
-        "startLine": 25,
+        "startIndex": 482,
+        "startLine": 27,
       }
     `);
   });
@@ -52,11 +52,11 @@ describe("getLocationByPath", () => {
     ).toMatchInlineSnapshot(`
       Object {
         "endCol": 47,
-        "endIndex": 361,
-        "endLine": 20,
+        "endIndex": 392,
+        "endLine": 22,
         "startCol": 9,
-        "startIndex": 322,
-        "startLine": 20,
+        "startIndex": 353,
+        "startLine": 22,
       }
     `);
   });
@@ -75,11 +75,11 @@ describe("getLocationByPath", () => {
     ).toMatchInlineSnapshot(`
       Object {
         "endCol": 47,
-        "endIndex": 361,
-        "endLine": 20,
+        "endIndex": 392,
+        "endLine": 22,
         "startCol": 9,
-        "startIndex": 322,
-        "startLine": 20,
+        "startIndex": 353,
+        "startLine": 22,
       }
     `);
   });
@@ -98,11 +98,11 @@ describe("getLocationByPath", () => {
     ).toMatchInlineSnapshot(`
       Object {
         "endCol": 28,
-        "endIndex": 600,
-        "endLine": 30,
+        "endIndex": 631,
+        "endLine": 32,
         "startCol": 9,
-        "startIndex": 451,
-        "startLine": 25,
+        "startIndex": 482,
+        "startLine": 27,
       }
     `);
   });
@@ -115,12 +115,11 @@ describe("getCodeFrameForLocation", () => {
       "utf-8"
     );
     expect(getCodeFrameForLocation(276, 281, source)).toMatchInlineSnapshot(`
-      "[90m1| [39m
-      [90m0| servers:[39m
-      [90m1|   - url: 'http://example[4m[31m.org'[90m[24m[39m
-      [90m2|[39m[31m [39m
-      [90m3| paths:[39m
-      [90m4|   user:[39m"
+      "[90m1|         url: example.org[39m
+      [90m0| [39m
+      [90m1| se[4m[31mrvers[90m[24m:[39m
+      [90m2|   - url: 'http://example.org'[39m
+      [90m3| [39m"
     `);
   });
 
@@ -130,19 +129,19 @@ describe("getCodeFrameForLocation", () => {
       "utf-8"
     );
     expect(getCodeFrameForLocation(276, 425, source)).toMatchInlineSnapshot(`
-      "[90m-1| [39m
-      [90m00| servers:[39m
-      [90m01|   - url: 'http://example[4m[31m.org'[90m[24m[39m
-      [90m02|[39m[31m [4m[31m[31m[24m[39m
-      [90m03|[39m[31m [4m[31mpaths:[31m[24m[39m
-      [90m04|[39m[31m [4m[31m  user:[31m[24m[39m
-      [90m05|[39m[31m [4m[31m    parameters:[31m[24m[39m
-      [90m06|[39m[31m [4m[31m      - $ref: '#/components/parameters/example'[31m[24m[39m
-      [90m07|[39m[31m [4m[31m    get:[31m[24m[39m
-      [90m08|[39m[31m [4m[31m      operationId: userGet[31m[24m[39m
-      [90m09|[39m[31m [4m[31m      description: Get user[31m[24m[39m
-      [90m10|       responses:[39m
-      [90m11|         '200':[39m"
+      "[90m-1|         url: example.org[39m
+      [90m00| [39m
+      [90m01| se[4m[31mrvers:[90m[24m[39m
+      [90m02|[39m[31m [4m[31m  - url: 'http://example.org'[31m[24m[39m
+      [90m03|[39m[31m [4m[31m[31m[24m[39m
+      [90m04|[39m[31m [4m[31mpaths:[31m[24m[39m
+      [90m05|[39m[31m [4m[31m  user:[31m[24m[39m
+      [90m06|[39m[31m [4m[31m    parameters:[31m[24m[39m
+      [90m07|[39m[31m [4m[31m      - $ref: '#/components/parameters/example'[31m[24m[39m
+      [90m08|[39m[31m [4m[31m    get:[31m[24m[39m
+      [90m09| [4m[31m      operationId: user[90m[24mGet[39m
+      [90m10|       description: Get user[39m
+      [90m11|       responses:[39m"
     `);
   });
 
@@ -153,8 +152,8 @@ describe("getCodeFrameForLocation", () => {
     );
     expect(getCodeFrameForLocation(0, 7, source)).toMatchInlineSnapshot(`
       "[90m1| [4m[31mopenapi[90m[24m: 3.0.2[39m
-      [90m2| info:[39m
-      [90m3|   x-redocly-overlay:[39m"
+      [90m2| x-redocly-context:[39m
+      [90m3|   version: default[39m"
     `);
   });
 
@@ -165,8 +164,8 @@ describe("getCodeFrameForLocation", () => {
     );
     expect(getCodeFrameForLocation(0, 14, source)).toMatchInlineSnapshot(`
       "[90m1|[39m[31m [4m[31mopenapi: 3.0.2[31m[24m[39m
-      [90m2| info:[39m
-      [90m3|   x-redocly-overlay:[39m"
+      [90m2| x-redocly-context:[39m
+      [90m3|   version: default[39m"
     `);
   });
 });

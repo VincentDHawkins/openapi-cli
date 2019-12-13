@@ -29,27 +29,27 @@ describe("createError", () => {
       })
     ).toMatchInlineSnapshot(`
       Object {
-        "codeFrame": "[90m22|       operationId: userGet[39m
-      [90m23|       description: Get user[39m
-      [90m24|       [4m[31mresponses:[90m[24m[39m
-      [90m25|[39m[31m [4m[31m        '200':[31m[24m[39m
-      [90m26|[39m[31m [4m[31m          description: example description[31m[24m[39m
-      [90m27|[39m[31m [4m[31m          content:[31m[24m[39m
-      [90m28|[39m[31m [4m[31m            application/json:[31m[24m[39m
-      [90m29|[39m[31m [4m[31m              schema:[31m[24m[39m
-      [90m30|[39m[31m [4m[31m                type: object[31m[24m[39m
-      [90m31|   project:[39m
-      [90m32|     get:[39m",
+        "codeFrame": "[90m24|       operationId: userGet[39m
+      [90m25|       description: Get user[39m
+      [90m26|       [4m[31mresponses:[90m[24m[39m
+      [90m27|[39m[31m [4m[31m        '200':[31m[24m[39m
+      [90m28|[39m[31m [4m[31m          description: example description[31m[24m[39m
+      [90m29|[39m[31m [4m[31m          content:[31m[24m[39m
+      [90m30|[39m[31m [4m[31m            application/json:[31m[24m[39m
+      [90m31|[39m[31m [4m[31m              schema:[31m[24m[39m
+      [90m32|[39m[31m [4m[31m                type: object[31m[24m[39m
+      [90m33|   project:[39m
+      [90m34|     get:[39m",
         "enableCodeframe": true,
         "file": "definitions/syntetic/syntetic-1.yaml",
         "fromRule": undefined,
         "location": Object {
           "endCol": 28,
-          "endIndex": 600,
-          "endLine": 30,
+          "endIndex": 631,
+          "endLine": 32,
           "startCol": 7,
-          "startIndex": 432,
-          "startLine": 24,
+          "startIndex": 463,
+          "startLine": 26,
         },
         "message": "This is a test error",
         "path": Array [
@@ -126,17 +126,17 @@ describe("fromError", () => {
       Object {
         "AST": null,
         "cache": Object {},
-        "codeFrame": "[90m22|       operationId: userGet[39m
-      [90m23|       description: Get user[39m
-      [90m24|       [4m[31mresponses:[90m[24m[39m
-      [90m25|[39m[31m [4m[31m        '200':[31m[24m[39m
-      [90m26|[39m[31m [4m[31m          description: example description[31m[24m[39m
-      [90m27|[39m[31m [4m[31m          content:[31m[24m[39m
-      [90m28|[39m[31m [4m[31m            application/json:[31m[24m[39m
-      [90m29|[39m[31m [4m[31m              schema:[31m[24m[39m
-      [90m30|[39m[31m [4m[31m                type: object[31m[24m[39m
-      [90m31|   project:[39m
-      [90m32|     get:[39m",
+        "codeFrame": "[90m24|       operationId: userGet[39m
+      [90m25|       description: Get user[39m
+      [90m26|       [4m[31mresponses:[90m[24m[39m
+      [90m27|[39m[31m [4m[31m        '200':[31m[24m[39m
+      [90m28|[39m[31m [4m[31m          description: example description[31m[24m[39m
+      [90m29|[39m[31m [4m[31m          content:[31m[24m[39m
+      [90m30|[39m[31m [4m[31m            application/json:[31m[24m[39m
+      [90m31|[39m[31m [4m[31m              schema:[31m[24m[39m
+      [90m32|[39m[31m [4m[31m                type: object[31m[24m[39m
+      [90m33|   project:[39m
+      [90m34|     get:[39m",
         "definitionStack": Array [],
         "document": null,
         "enableCodeframe": true,
@@ -145,11 +145,11 @@ describe("fromError", () => {
         "fromRule": undefined,
         "location": Object {
           "endCol": 28,
-          "endIndex": 600,
-          "endLine": 30,
+          "endIndex": 631,
+          "endLine": 32,
           "startCol": 7,
-          "startIndex": 432,
-          "startLine": 24,
+          "startIndex": 463,
+          "startLine": 26,
         },
         "message": "This is a test error",
         "path": Array [
@@ -167,7 +167,7 @@ describe("fromError", () => {
               "get",
               "responses",
             ],
-            "startLine": 24,
+            "startLine": 26,
           },
         ],
         "possibleAlternate": undefined,

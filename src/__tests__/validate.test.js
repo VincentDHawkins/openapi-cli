@@ -13,21 +13,21 @@ describe("Traverse files", () => {
     ).toMatchInlineSnapshot(`
       Array [
         Object {
-          "codeFrame": "[90m42| externalDocs:[39m
-      [90m43|   description: asdasd[39m
-      [90m44|   [4m[31murl: googlecom[90m[24m[39m
-      [90m45| components:[39m
-      [90m46|   securitySchemes:[39m",
+          "codeFrame": "[90m44| externalDocs:[39m
+      [90m45|   description: asdasd[39m
+      [90m46|   [4m[31murl: googlecom[90m[24m[39m
+      [90m47| components:[39m
+      [90m48|   securitySchemes:[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/external-docs",
           "location": Object {
             "endCol": 16,
-            "endIndex": 909,
-            "endLine": 44,
+            "endIndex": 940,
+            "endLine": 46,
             "startCol": 3,
-            "startIndex": 895,
-            "startLine": 44,
+            "startIndex": 926,
+            "startLine": 46,
           },
           "message": "url must be a valid URL",
           "path": Array [
@@ -64,21 +64,21 @@ describe("Traverse files", () => {
       .toMatchInlineSnapshot(`
       Array [
         Object {
-          "codeFrame": "[90m55|       bearerFormat: JWT[39m
-      [90m56|   parameters:[39m
-      [90m57|     [4m[31mexample[90m[24m:[39m
-      [90m58|       allOf:[39m
-      [90m59|         - name: bla[39m",
+          "codeFrame": "[90m57|       bearerFormat: JWT[39m
+      [90m58|   parameters:[39m
+      [90m59|     [4m[31mexample[90m[24m:[39m
+      [90m60|       allOf:[39m
+      [90m61|         - name: bla[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/parameter",
           "location": Object {
             "endCol": 12,
-            "endIndex": 1261,
-            "endLine": 57,
+            "endIndex": 1292,
+            "endLine": 59,
             "startCol": 5,
-            "startIndex": 1254,
-            "startLine": 57,
+            "startIndex": 1285,
+            "startLine": 59,
           },
           "message": "The field 'name' must be present on this level.",
           "path": Array [
@@ -96,7 +96,7 @@ describe("Traverse files", () => {
                 "parameters",
                 0,
               ],
-              "startLine": 20,
+              "startLine": 22,
             },
           ],
           "possibleAlternate": undefined,
@@ -122,21 +122,21 @@ describe("Traverse files", () => {
           },
         },
         Object {
-          "codeFrame": "[90m55|       bearerFormat: JWT[39m
-      [90m56|   parameters:[39m
-      [90m57|     [4m[31mexample[90m[24m:[39m
-      [90m58|       allOf:[39m
-      [90m59|         - name: bla[39m",
+          "codeFrame": "[90m57|       bearerFormat: JWT[39m
+      [90m58|   parameters:[39m
+      [90m59|     [4m[31mexample[90m[24m:[39m
+      [90m60|       allOf:[39m
+      [90m61|         - name: bla[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/parameter",
           "location": Object {
             "endCol": 12,
-            "endIndex": 1261,
-            "endLine": 57,
+            "endIndex": 1292,
+            "endLine": 59,
             "startCol": 5,
-            "startIndex": 1254,
-            "startLine": 57,
+            "startIndex": 1285,
+            "startLine": 59,
           },
           "message": "The field 'in' must be present on this level.",
           "path": Array [
@@ -154,7 +154,7 @@ describe("Traverse files", () => {
                 "parameters",
                 0,
               ],
-              "startLine": 20,
+              "startLine": 22,
             },
           ],
           "possibleAlternate": undefined,
@@ -180,21 +180,21 @@ describe("Traverse files", () => {
           },
         },
         Object {
-          "codeFrame": "[90m55|       bearerFormat: JWT[39m
-      [90m56|   parameters:[39m
-      [90m57|     [4m[31mexample[90m[24m:[39m
-      [90m58|       allOf:[39m
-      [90m59|         - name: bla[39m",
+          "codeFrame": "[90m57|       bearerFormat: JWT[39m
+      [90m58|   parameters:[39m
+      [90m59|     [4m[31mexample[90m[24m:[39m
+      [90m60|       allOf:[39m
+      [90m61|         - name: bla[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/parameter",
           "location": Object {
             "endCol": 12,
-            "endIndex": 1261,
-            "endLine": 57,
+            "endIndex": 1292,
+            "endLine": 59,
             "startCol": 5,
-            "startIndex": 1254,
-            "startLine": 57,
+            "startIndex": 1285,
+            "startLine": 59,
           },
           "message": "The field 'name' must be present on this level.",
           "path": Array [
@@ -227,21 +227,21 @@ describe("Traverse files", () => {
           },
         },
         Object {
-          "codeFrame": "[90m55|       bearerFormat: JWT[39m
-      [90m56|   parameters:[39m
-      [90m57|     [4m[31mexample[90m[24m:[39m
-      [90m58|       allOf:[39m
-      [90m59|         - name: bla[39m",
+          "codeFrame": "[90m57|       bearerFormat: JWT[39m
+      [90m58|   parameters:[39m
+      [90m59|     [4m[31mexample[90m[24m:[39m
+      [90m60|       allOf:[39m
+      [90m61|         - name: bla[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/parameter",
           "location": Object {
             "endCol": 12,
-            "endIndex": 1261,
-            "endLine": 57,
+            "endIndex": 1292,
+            "endLine": 59,
             "startCol": 5,
-            "startIndex": 1254,
-            "startLine": 57,
+            "startIndex": 1285,
+            "startLine": 59,
           },
           "message": "The field 'in' must be present on this level.",
           "path": Array [
@@ -274,21 +274,21 @@ describe("Traverse files", () => {
           },
         },
         Object {
-          "codeFrame": "[90m42| externalDocs:[39m
-      [90m43|   description: asdasd[39m
-      [90m44|   [4m[31murl: googlecom[90m[24m[39m
-      [90m45| components:[39m
-      [90m46|   securitySchemes:[39m",
+          "codeFrame": "[90m44| externalDocs:[39m
+      [90m45|   description: asdasd[39m
+      [90m46|   [4m[31murl: googlecom[90m[24m[39m
+      [90m47| components:[39m
+      [90m48|   securitySchemes:[39m",
           "enableCodeframe": true,
           "file": "definitions/syntetic/syntetic-1.yaml",
           "fromRule": "oas3-schema/external-docs",
           "location": Object {
             "endCol": 16,
-            "endIndex": 909,
-            "endLine": 44,
+            "endIndex": 940,
+            "endLine": 46,
             "startCol": 3,
-            "startIndex": 895,
-            "startLine": 44,
+            "startIndex": 926,
+            "startLine": 46,
           },
           "message": "url must be a valid URL",
           "path": Array [
