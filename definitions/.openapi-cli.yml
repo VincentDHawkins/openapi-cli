@@ -8,7 +8,7 @@ rules:
     executionOrder: late
 
   bundler: off
-  debug-info: on
+  debug-info: off
 
   parameterPartial: warning
   parameterWithAllOf: warning
